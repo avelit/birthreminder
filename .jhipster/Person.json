@@ -1,0 +1,39 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "name",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "lastName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "birthDay",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "info",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "remind",
+            "fieldType": "Boolean"
+        }
+    ],
+    "dto": "no",
+    "service": "no",
+    "pagination": "pager"
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title th:text="#{email.reminder.title}">Reminder</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+        <p th:text="#{email.reminder.greeting(${user.login})}">
+            Dear
+        </p>
+        <table>
+            <tbody>
+                <tr th:each="person : ${persons}">
+                    <td th:text="${person.lastName}"></td>
+                    <td th:text="${person.name}"></td>
+                    <td th:text="${person.birthDay}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <span th:text="#{email.reminder.text2}">Regards, </span>
+            <br/>
+            <em th:text="#{email.signature}">Birthday reminder.</em>
+        </p>
+    </body>
+</html>

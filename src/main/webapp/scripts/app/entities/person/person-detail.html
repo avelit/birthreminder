@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span>Person</span> {{person.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>LastName</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.lastName}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>BirthDay</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.birthDay | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Info</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.info}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Remind</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.remind}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Remind before</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.remindBefore}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Remind after</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.remindAfter}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Owner</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{person.owner}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>

@@ -1,0 +1,7 @@
+birthreminder-mongodb:
+  container_name: birthreminder-mongodb
+  image: mongo:3.0.7
+  # volumes:
+  #   - ~/volumes/jhipster/birthreminder/mongodb/:/data/db/
+  ports:
+    - "27017:27017"

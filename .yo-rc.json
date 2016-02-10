@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "birthreminder",
+    "packageName": "birthreminder",
+    "packageFolder": "birthreminder",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "686599ed4d2d514294da615d9d460c3c0b495b79",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
