@@ -15,7 +15,6 @@
         <table class="table table-striped">
             <thead>
                 <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
-                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="name"><span>Name</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="lastName"><span>LastName</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="birthDay"><span>BirthDay</span> <span class="glyphicon glyphicon-sort"></span></th>
@@ -28,8 +27,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="person in persons track by person.id">
-                    <td><a ui-sref="person.detail({id:person.id})">{{person.id}}</a></td>
-                    <td>{{person.name}}</td>
+                    <td><a ui-sref="person.detail({id:person.id})">{{person.name}}</a></td>
                     <td>{{person.lastName}}</td>
                         <td>{{person.birthDay | date:'mediumDate'}}</td>
                     <td>{{person.info}}</td>

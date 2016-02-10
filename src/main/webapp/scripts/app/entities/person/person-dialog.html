@@ -1,23 +1,20 @@
 
-<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+<form name="editForm" role="form" class="form-horizontal" novalidate ng-submit="save()" show-validation>
 
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                 ng-click="clear()">&times;</button>
-        <h4 class="modal-title" id="myPersonLabel">Create or edit a Person</h4>
+        <h4 class="modal-title" id="myPersonLabel"><span ng-show="person.id">Edit</span><span ng-hide="person.id">Create</span> a Person</h4>
     </div>
     <div class="modal-body">
         <jh-alert-error></jh-alert-error>
         <div class="form-group">
-            <label for="id">ID</label>
-            <input type="text" class="form-control" id="id" name="id"
-                    ng-model="person.id" readonly />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_name">Name</label>
-            <input type="text" class="form-control" name="name" id="field_name"
+            <label class="control-label col-sm-2" for="field_name">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" id="field_name"
                     ng-model="person.name"
                     required />
+            </div>
             <div ng-show="editForm.name.$invalid">
                 <p class="help-block"
                     ng-show="editForm.name.$error.required">
@@ -26,10 +23,12 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_lastName">LastName</label>
-            <input type="text" class="form-control" name="lastName" id="field_lastName"
+            <label class="control-label col-sm-2" for="field_lastName">LastName</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="lastName" id="field_lastName"
                     ng-model="person.lastName"
                     required />
+            </div>
             <div ng-show="editForm.lastName.$invalid">
                 <p class="help-block"
                     ng-show="editForm.lastName.$error.required">
@@ -38,36 +37,43 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_birthDay">BirthDay</label>
-            <input id="field_birthDay" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="person.birthDay" is-open="datePickerForBirthDay.status.opened"
-            />
+            <label class="control-label col-sm-2" for="field_birthDay">BirthDay</label>
+            <div class="col-sm-9">
+                <input id="field_birthDay" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="person.birthDay" is-open="datePickerForBirthDay.status.opened" />
+            </div>
+            <div class="col-sm-1">
             <span class="input-group-btn">
                 <button type="button" class="btn btn-default" ng-click="datePickerForBirthDayOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
             </span>
+            </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_info">Info</label>
+            <label class="control-label col-sm-2" for="field_info">Info</label>
+            <div class="col-sm-10">
             <input type="text" class="form-control" name="info" id="field_info"
                     ng-model="person.info"
                      />
+                </div>
         </div>
         <div class="form-group">
-            <label class="control-label" for="field_remind">Remind</label>
+            <label class="control-label col-sm-2" for="field_remind">Remind</label>
+            <div class="col-sm-1">
             <input type="checkbox" class="form-control" name="remind" id="field_remind"
                     ng-model="person.remind"
                      />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_remind_before">Remind before</label>
+            </div>
+            <label class="control-label col-sm-1" for="field_remind_before">before</label>
+            <div class="col-sm-1">
             <input type="text" class="form-control" name="remind" id="field_remind_before"
                     ng-model="person.remindBefore"
                      />
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="field_remind_after">Remind after</label>
+            </div>
+            <label class="control-label col-sm-1" for="field_remind_after">after</label>
+            <div class="col-sm-1">
             <input type="text" class="form-control" name="remind" id="field_remind_after"
                     ng-model="person.remindAfter"
                      />
+            </div>
         </div>
 
     </div>

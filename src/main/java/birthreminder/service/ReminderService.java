@@ -28,8 +28,8 @@ public class ReminderService {
     @Inject
     private MailService mailService;
 
-    //@Scheduled(cron = "0 0 5 * * ?")
-    @Scheduled(cron = "1 * * * * ?")
+    @Scheduled(cron = "0 0 5 * * ?")
+    //@Scheduled(cron = "1 * * * * ?")
     public void notifyUsers() {
         LocalDate now = LocalDate.now();
         List<User> users = userRepository.findAll();
