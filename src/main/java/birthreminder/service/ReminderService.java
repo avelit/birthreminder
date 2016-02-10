@@ -40,7 +40,7 @@ public class ReminderService {
                 LocalDate birthDay = person.getBirthDay();
                 birthDay.withYear(now.getYear());
                 int period = now.getDayOfYear() - birthDay.getDayOfYear();
-                if (-person.getRemindAfter() < period && period < person.getRemindBefore()) {
+                if (-person.getRemindBefore() < period && period < person.getRemindAfter()) {
                     personsForRemind.add(person);
                 }
             }

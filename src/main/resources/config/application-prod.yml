@@ -33,7 +33,7 @@ spring:
         properties.mail.smtp:
             auth: true
             starttls.enable: true
-            ssl.trust: smtp.gmail.com
+            ssl.trust: smtp.ukr.net
     thymeleaf:
         cache: true
 

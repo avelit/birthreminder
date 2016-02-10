@@ -24,16 +24,16 @@ spring:
             port: 27017
             database: birthreminder
     mail:
-        host: smtp.gmail.com
-        port: 587
-        username: birthrmdr@gmail.com
+        host: smtp.ukr.net
+        port: 465
+        username: birthrmdr@ukr.net
         password: birthrmdr123
         protocol: smtp
         tls: true
         properties.mail.smtp:
             auth: true
             starttls.enable: true
-            ssl.trust: smtp.gmail.com
+            ssl.trust: smtp.ukr.net
     messages:
         cache-seconds: 1
     thymeleaf:
